@@ -10,7 +10,7 @@ function createCube() {
   // create a Mesh containing the geometry and material
   const cube = new Mesh(geometry, material)
 
-  cube.rotation.set(-1, -1, 0.8);
+  cube.rotation.set(Math.PI / 4, Math.PI / 4, 0)
 
   return cube
 }
