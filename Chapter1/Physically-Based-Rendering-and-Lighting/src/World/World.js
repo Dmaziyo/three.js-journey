@@ -5,12 +5,14 @@ import { createScene } from './components/scene.js'
 
 import { createRenderer } from './systems/renderer.js'
 import { Resizer } from './systems/Resizer.js'
+import { Loop } from './systems/loop.js'
 
 // These variables are module-scoped: we cannot access them
 // from outside the module
 let camera
 let renderer
 let scene
+let loop
 
 class World {
   constructor(container) {
@@ -18,6 +20,7 @@ class World {
     scene = createScene()
     renderer = createRenderer()
     container.append(renderer.domElement)
+    loop = new Loop(camera, scene, renderer)
 
     const cube = createCube()
     const light = createLights()
@@ -34,6 +37,12 @@ class World {
   render() {
     // draw a single frame
     renderer.render(scene, camera)
+  }
+  start() {
+    loop.start()
+  }
+  stop() {
+    loop.stop()
   }
 }
 

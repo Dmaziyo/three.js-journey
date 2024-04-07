@@ -1,12 +1,12 @@
 import {
-  BoxBufferGeometry,
+  BoxGeometry,
   Color,
   Mesh,
   MeshBasicMaterial,
   PerspectiveCamera,
   Scene,
   WebGLRenderer
-} from 'https://cdn.skypack.dev/three@0.149.0'
+} from 'three'
 
 // Get the reference to the scene-container
 const container = document.querySelector('#scene-container')
@@ -27,7 +27,7 @@ const camera = new PerspectiveCamera(fov, aspect, near, far)
 
 camera.position.set(0, 0, 10)
 
-const geometry = new BoxBufferGeometry(2, 2, 2)
+const geometry = new BoxGeometry(2, 2, 2)
 
 const material = new MeshBasicMaterial()
 

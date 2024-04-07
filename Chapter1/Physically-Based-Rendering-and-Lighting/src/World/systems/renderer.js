@@ -1,4 +1,4 @@
-import { WebGLRenderer } from 'https://cdn.skypack.dev/three@0.149.0'
+import { WebGLRenderer } from 'three'
 
 function createRenderer() {
   const renderer = new WebGLRenderer({})

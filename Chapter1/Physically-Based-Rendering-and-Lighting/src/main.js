@@ -8,7 +8,7 @@ function main() {
   const world = new World(container);
 
   // draw the scene
-  world.render();
+  world.start();
 }
 
 main();

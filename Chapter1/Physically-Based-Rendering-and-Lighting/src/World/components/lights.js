@@ -1,4 +1,4 @@
-import { DirectionalLight } from 'https://cdn.skypack.dev/three@0.149.0'
+import { DirectionalLight } from 'three'
 
 function createLights() {
   const light = new DirectionalLight('white', 8)
